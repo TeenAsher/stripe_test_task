@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: nouchka/sqlite3:latest
+    env_file:
+      - .env
+    volumes:
+      - "./data/sqlite.db:/sqlite.db"
+    restart: always
